@@ -1,0 +1,260 @@
+/* --- VARIABLES FRESCAS (VERDE & BLANCO) --- */
+:root {
+    --bg-body: #f0fdf4;       /* Fondo menta muy suave */
+    --bg-card: #ffffff;       /* Blanco puro */
+    
+    --primary-green: #10b981; /* Verde Esmeralda (Principal) */
+    --dark-green: #064e3b;    /* Verde Bosque (Texto fuerte) */
+    --light-green: #d1fae5;   /* Verde Agua (Fondos secundarios) */
+    --link-hover: #059669;    /* Verde un poco más oscuro para hover */
+    
+    --text-main: #334155;     /* Gris azulado (Más legible que negro puro) */
+    --text-muted: #64748b;    /* Gris suave para descripciones */
+    
+    --shadow-soft: 0 10px 15px -3px rgba(16, 185, 129, 0.1); /* Sombra verde suave */
+    --radius: 12px;           /* Bordes redondeados modernos */
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background-color: var(--bg-body);
+    /* Patrón de fondo muy sutil */
+    background-image: radial-gradient(#d1fae5 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- CABECERA --- */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-green), #047857);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(5, 150, 105, 0.2);
+    margin-bottom: 3rem;
+}
+
+.header-icon {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem 1.5rem;
+}
+
+/* --- TARJETA DE TEMA --- */
+.topic-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 2rem;
+    overflow: hidden; /* Para que nada se salga de los bordes redondeados */
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-3px); /* Pequeña elevación al pasar el mouse */
+    box-shadow: 0 15px 30px -5px rgba(16, 185, 129, 0.15);
+    border-color: var(--light-green);
+}
+
+/* Cabecera interna del tema */
+.topic-header {
+    padding: 1.5rem 2rem;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.topic-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-green);
+    background: var(--light-green);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.topic-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--text-main);
+}
+
+.badge {
+    background-color: var(--bg-body);
+    color: var(--dark-green);
+    border: 1px solid var(--light-green);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- GRID DE CONTENIDO (DOS COLUMNAS) --- */
+.card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.column {
+    padding: 2rem;
+}
+
+.column.tasks {
+    background-color: #fafbfb; /* Fondo sutilmente diferente para diferenciar */
+    border-left: 1px dashed #cbd5e1;
+}
+
+.column h3 {
+    margin-top: 0;
+    color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.icon-box {
+    color: var(--primary-green);
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- LISTAS DE ENLACES --- */
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-list li {
+    margin-bottom: 0.8rem;
+}
+
+.resource-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+/* Icono pequeño dentro del enlace (JS, Touch, etc) */
+.icon-small {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Efecto Hover */
+.resource-list a:hover {
+    border-color: var(--primary-green);
+    color: var(--link-hover);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+    transform: translateX(5px); /* Se mueve a la derecha */
+}
+
+.resource-list a:hover .icon-small {
+    color: var(--primary-green);
+}
+
+.arrow {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    transition: color 0.2s;
+}
+
+.resource-list a:hover .arrow {
+    color: var(--primary-green);
+}
+
+/* --- ESTILO PARA PROYECTO DESTACADO --- */
+.featured a {
+    background-color: var(--light-green);
+    border-color: var(--primary-green);
+    color: var(--dark-green);
+}
+
+.featured a:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+.featured a:hover .icon-small, 
+.featured a:hover .arrow {
+    color: white;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 2rem;
+    font-size: 0.85rem;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 2rem;
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+    .card-body {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+    .column.tasks {
+        border-left: none;
+        border-top: 1px dashed #cbd5e1;
+    }
+    .topic-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
