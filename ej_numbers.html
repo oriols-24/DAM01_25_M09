@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+<h1>JavaScript numbers</h1>
+
+<script>
+// Función para comparar dos números y determinar cuál es mayor
+function cualEsMayor(num1, num2) {
+    if (num1 > num2) {
+        return num1 + " es mayor que " + num2;
+    } else if (num2 > num1) {
+        return num2 + " es mayor que " + num1;
+    } else {
+        return "Ambos números son iguales.";
+    }
+}
+let mayor = cualEsMayor(10, 20);
+console.log(mayor); 
+
+// Funcion que calcula la multiplicación de dos números sin usar el operador *
+function multiplicar(a, b) {
+    let resultado = 0;
+    for (let i = 0; i < b; i++) {
+        resultado += a;
+    }
+    return resultado;
+}
+let resultado = multiplicar(5, 4);
+console.log("El resultado es: " + resultado); 
+
+// Funcion que calcula la multiplicacion de 3 numeros, usando la funcion anterior
+function multiplicarTresNumeros(x, y, z) {
+    return multiplicar(multiplicar(x, y), z);
+}
+let resultadoTres = multiplicarTresNumeros(2, 3, 4);
+console.log("El el resultado de los tres números es: " + resultadoTres); 
+
+// Funcion que calcula la nota media de 3 notes y devuelve la media con 1 decimal
+function notaMedia(nota1, nota2, nota3) {
+    let suma = nota1 + nota2 + nota3;
+    let media = suma / 3;
+    return media.toFixed(1);
+}
+let mediaNotas = notaMedia(7.5, 8.2, 6.7);
+console.log("La nota media es: " + mediaNotas);       
+
+// Funcion que encuentra entre los primeros 10.000 numeros naturales los numeros que completan la siguiente propiedad:
+// La suma del cubo de cada una de sus cifras es igual al mismo número.
+
+function encontrarNumerosEspeciales() {
+    let numerosEspeciales = [];
+    for (let i = 1; i <= 10000; i++) {
+        let sumaCubos = 0;
+        let numeroStr = i.toString();
+        for (let j = 0; j < numeroStr.length; j++) {
+            let cifra = parseInt(numeroStr[j]);
+            sumaCubos += Math.pow(cifra, 3);
+        }
+        if (sumaCubos === i) {
+            numerosEspeciales.push(i);
+        }
+    }
+    return numerosEspeciales;
+}
+let especiales = encontrarNumerosEspeciales();
+console.log("Números especiales encontrados: " + especiales.join(", "));    
+</script>
+
+</body>
+</html>
