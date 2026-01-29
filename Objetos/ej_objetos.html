@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>JavaScript objetos</title>
+</head>
+<body>
+<h1>JavaScript objetos</h1>
+<script>
+    
+    // objeto tvSamsung 
+    const tvSamsung = {
+        nombre: "TV Samsung 42",
+        categoria: "Televisores",
+        unidades: 4,
+        precio: 345.590,
+        getImporte: function() {
+            return this.unidades * this.precio;
+        }
+    };
+
+    // Mostramos los datos en pantalla 
+    for (let atributo in tvSamsung) {
+        if (typeof tvSamsung[atributo] !== "function") {
+            document.write(atributo + ": " + tvSamsung[atributo] + "<br>");
+        }
+    }
+
+    // obtenemos el string que corresponde al JSON del objeto
+    const tvSamsungJSON = JSON.stringify(tvSamsung);
+    document.write("<br>Objeto en formato JSON:<br>" + tvSamsungJSON + "<br>");
+
+
+</script>
+</body> 
+</html>
