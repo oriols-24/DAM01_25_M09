@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+
+<html>
+<body>
+<h1>JavaScript funciones</h1>
+
+<script>
+
+function ejercicios(ejercicio) {
+    switch (ejercicio) {
+        case 1: {
+            const nombre = prompt("Introduzca tu nombre:");
+            const saludo = prompt('Introduzca el saludo (defecto: "Hola"):');
+            if (nombre) {
+                const resultado = saludar(nombre, saludo);
+                document.getElementById("resultado1").textContent = resultado;
+            };
+            break;
+        };
+        case 2: {
+            const n1 = parseInt(prompt("Introduzca el primer número:"));
+            const n2 = parseInt(prompt("Introduzca el segon número:"));
+            const operacion = prompt("Introduzca la operación que quieres hacer (por defecto suma) ['+','-','*','/']: ");
+            if (n1 && n2) {
+                const resultado = calcular(n1, n2, operacion);
+                document.getElementById("resultado2").textContent = resultado;
+            };
+            break;
+        };
+        case 3: {
+            const param = prompt("Introdueix els valors separats per una coma:").trim().split(",").map(item => item.trim()); // Referència: https://stackoverflow.com/questions/7695997/split-the-sentences-by-and-remove-surrounding-spaces
+            if (param) {
+                const resultado = calcularPromedio(...param);
+                document.getElementById("resultado3").textContent = resultado;
+            };
+        };
+        default: 
+            break;
+    };
+}
+
+
+ 
+function saludar(nombre, saludo = "Hola") {
+    return saludo + " " + nombre
+}
+
+
+const operaciones = {
+    SUMA: '+',
+    RESTA: '-',
+    MULTIPLICACION: '*',
+    DIVISION: '/'
+}
+
+
+function calcular(num1, num2, operacion = operaciones.SUMA) {
+    switch (operacion) {
+        case operaciones.SUMA: return num1 + num2;
+        case operaciones.RESTA: return num1 - num2;
+        case operaciones.MULTIPLICACION: return num1 * num2
+        case operaciones.DIVISION: return num1 / num2
+        default:
+            console.error("[ERROR] Operación no permitido.")
+            break;
+    }
+}
+
+
+function calcularPromedio() {
+    let count = 0;
+    let result = 0;
+    for (let element of arguments) {
+        if (!isNaN(parseInt(element))) {
+            count++;
+            result += parseInt(element);
+        }
+    }
+    return result / count;
+}
+
+
+function concatenarNombres(...args) {
+    return args.filter(arg => typeof arg === 'string').join(", ");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!--
+Crea una página HTML con varios elementos: botón, capa, imagen, un campo de texto.
+Añade unos escuchadores de eventos para:
+Al hacer clic en el botón se lance un mensaje al usuario.
+A hacer doble clic salte otra alerta.
+Al detectar que el ratón pasa por encima del elemento se vaya escribiendo en consola su posición X,Y
+Al presionar “Enter” salte una alerta.
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eventos en JavaScript</title>
+    <style>
+        #Capa {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos en JavaScript</h1>      
+    <button id="Boton">Haz clic aquí</button>
+    <div id="Capa">Pasa el ratón por aquí</div>
+    <br>
+    <img id="Imagen" src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
+    <br><br>
+    <input type="text" id="CampoTexto" placeholder="Escribe algo y presiona Enter">
+    
+<script>
+    // Evento al hacer clic en el botón
+    document.getElementById("Boton").addEventListener("click", function() {
+        alert("¡Has hecho clic en el botón!");
+    });
+
+    // Evento al hacer doble clic en el botón
+    document.getElementById("Boton").addEventListener("dblclick", function() {
+        alert("¡Has hecho doble clic en el botón!");
+    });
+
+    // Evento al pasar el ratón por encima de la capa
+    document.getElementById("Capa").addEventListener("mousemove", function(event) {
+        console.log("Posición del ratón - X: " + event.clientX + ", Y: " + event.clientY);
+    });
+
+    // Evento al presionar "Enter" en el campo de texto
+    document.getElementById("miCampoTexto").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            alert("¡Has presionado Enter!");
+        }
+    });
+</script>
+
+</body>
+</html>
