@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>JavaScript arrays</title>
+</head>
+<body>
+<h1>JavaScript arrays</h1>
+
+<script>
+
+// Función que devuelve la suma de todos los números pares en la lista. 
+
+
+
+function sumarPares(numeros) {
+    let suma = 0;
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 === 0) {
+            suma += numeros[i];
+        }
+    }
+    return suma;
+}
+
+const listaNumeros = [1, 2, 3, 4, 5, 6];
+console.log(sumarPares(listaNumeros));
+
+// Función que recibe una lista de datos de un alumno y los reordena: En lugar de tener al final el nombre del alumno lo queremos al principio, 
+// antes del apellido y queremos añadir al final la nota media.
+
+function ordenDatos(datos) {
+    const nombre = datos.pop();
+    const apellido = datos.shift();
+    const notaMedia = calcularNotaMedia(datos);
+    return `${nombre},${apellido},${datos.join(",")},${notaMedia}`;
+}
+
+function calcularNotaMedia(notas) {
+    const suma = notas.reduce((acc, curr) => acc + parseFloat(curr), 0);
+    return suma / notas.length;
+}
+
+const datosAlumno = ["García", "7.5", "8.0", "6.5", "Ana"];
+console.log(ordenDatos(datosAlumno)); // Salida: "Ana,García,7.5,8.0,6.5,7.333333333333333" 
+
+
+// Elimina palabras del array que empiezan por Z y devuelve el nuevo sin estas palabras.
+
+function filterWords(words) {
+    return words.filter(word => !word.startsWith("Z"));
+}
+
+const palabras = ["Manzana", "Zanahoria", "Pera", "Zorro", "Naranja"];
+console.log(filterWords(palabras));
+
+</script>
+</body>
+</html>
