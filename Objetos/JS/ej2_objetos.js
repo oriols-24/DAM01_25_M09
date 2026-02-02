@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>  
-<head>
-    <title>JavaScript objetos</title>
-</head>
-<body>
-<h1>JavaScript objetos</h1>
-<script>
-    
-    // objeto tvSamsung 
+// objeto tvSamsung 
     const tvSamsung = {
         nombre: "TV Samsung 42",
         categoria: "Televisores",
@@ -21,15 +12,11 @@
     // Mostramos los datos en pantalla 
     for (let atributo in tvSamsung) {
         if (typeof tvSamsung[atributo] !== "function") {
-            document.write(atributo + ": " + tvSamsung[atributo] + "<br>");
+
+            console.log(atributo + ": " + tvSamsung[atributo]);
         }
     }
 
     // obtenemos el string que corresponde al JSON del objeto
     const tvSamsungJSON = JSON.stringify(tvSamsung);
-    document.write("<br>Objeto en formato JSON:<br>" + tvSamsungJSON + "<br>");
-
-
-</script>
-</body> 
-</html>
+    console.log("Objeto en formato JSON:", tvSamsungJSON);
