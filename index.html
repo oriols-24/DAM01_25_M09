@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAM1 - JavaScript M04/M09</title>
+    <title>DAM1 - JavaScript Hub</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
@@ -13,45 +13,132 @@
         <div class="header-content">
             <span class="material-icons-round header-icon">terminal</span>
             <h1>DAM1 <span class="accent">JS</span></h1>
-            <p>Módulos M04 y M09 | Desarrollo Web Entorno Cliente</p>
+            <p>Módulo M09 | Repositorio de Ejercicios</p>
         </div>
     </header>
 
     <main>
-        <article class="topic-card" id="tema-dom">
+        
+        <div style="margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem;">
+            <h2 style="color: var(--dark-green); font-size: 2rem; margin: 0; display: flex; align-items: center; gap: 10px;">
+                <span class="material-icons-round" style="color: var(--primary-green);">folder_special</span>
+                JavaScript
+            </h2>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Ejercicios organizados por temática.</p>
+        </div>
+
+        <article class="topic-card" id="tema-arrays">
             <div class="topic-header">
                 <div class="title-group">
                     <span class="topic-number">01</span>
-                    <h2>Manipulación del DOM</h2>
+                    <h2>Arrays (Arreglos)</h2>
                 </div>
-                <span class="badge">Bloque 1: Cliente</span>
+                <span class="badge">Estructuras de Datos</span>
             </div>
-            
+            <div class="card-body">
+                <section class="column docs">
+                    <h3><span class="material-icons-round icon-box">info</span> Descripción</h3>
+                    <p class="description">Manipulación de listas y colecciones de datos.</p>
+                </section>
+                <section class="column tasks">
+                    <h3><span class="material-icons-round icon-box">play_arrow</span> Ejercicios</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="./Arrays/ej_arrays.html">
+                                <span class="material-icons-round icon-small">list_alt</span>
+                                Ejercicio: Arrays
+                                <span class="material-icons-round arrow">chevron_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+
+        <article class="topic-card" id="tema-eventos">
+            <div class="topic-header">
+                <div class="title-group">
+                    <span class="topic-number">02</span>
+                    <h2>Eventos</h2>
+                </div>
+                <span class="badge">Interacción</span>
+            </div>
+            <div class="card-body">
+                <section class="column docs">
+                    <h3><span class="material-icons-round icon-box">touch_app</span> Descripción</h3>
+                    <p class="description">Manejo de la interacción del usuario (clicks, teclado, mouse).</p>
+                </section>
+                <section class="column tasks">
+                    <h3><span class="material-icons-round icon-box">play_arrow</span> Ejercicios</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="./Eventos/ej_eventos.html">
+                                <span class="material-icons-round icon-small">mouse</span>
+                                Ejercicio: Eventos
+                                <span class="material-icons-round arrow">chevron_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+
+        <article class="topic-card" id="tema-funciones">
+            <div class="topic-header">
+                <div class="title-group">
+                    <span class="topic-number">03</span>
+                    <h2>Funciones</h2>
+                </div>
+                <span class="badge">Lógica</span>
+            </div>
+            <div class="card-body">
+                <section class="column docs">
+                    <h3><span class="material-icons-round icon-box">functions</span> Descripción</h3>
+                    <p class="description">Bloques de código reutilizables y modularidad.</p>
+                </section>
+                <section class="column tasks">
+                    <h3><span class="material-icons-round icon-box">play_arrow</span> Ejercicios</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="./Funciones/ej_Funciones.html">
+                                <span class="material-icons-round icon-small">code</span>
+                                Ejercicio: Funciones
+                                <span class="material-icons-round arrow">chevron_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+
+        <article class="topic-card" id="tema-objetos">
+            <div class="topic-header">
+                <div class="title-group">
+                    <span class="topic-number">04</span>
+                    <h2>Objetos</h2>
+                </div>
+                <span class="badge">POO / Estructura</span>
+            </div>
             <div class="card-body">
                 <section class="column docs">
                     <h3>
-                        <span class="material-icons-round icon-box">menu_book</span>
-                        Documentación y Recursos
+                        <span class="material-icons-round icon-box">school</span>
+                        Gestión Alumnos
                     </h3>
-                    <p class="description">Apuntes teóricos y referencias oficiales.</p>
-                    
+                    <p class="description">Ejercicios principales dentro de la carpeta HTML.</p>
                     <ul class="resource-list">
                         <li>
-                            <a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction" target="_blank">
-                                Intro al DOM (MDN Web Docs)
-                                <span class="material-icons-round arrow">open_in_new</span>
+                            <a href="./Objetos/HTML/index_alumnos.html">
+                                <span class="material-icons-round icon-small">person</span>
+                                Index Alumnos
+                                <span class="material-icons-round arrow">chevron_right</span>
                             </a>
                         </li>
                         <li>
-                            <a href="./docs/m04_tema1_dom.pdf" target="_blank">
-                                📄 Apuntes de clase (PDF)
-                                <span class="material-icons-round arrow">download</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://javascript.info/dom-nodes" target="_blank">
-                                Estructura del Árbol de Nodos
-                                <span class="material-icons-round arrow">link</span>
+                            <a href="./Objetos/JS/alumnos.js">
+                                <span class="material-icons-round icon-small">data_object</span>
+                                Alumnos JavaScript
+                                <span class="material-icons-round arrow">chevron_right</span>
                             </a>
                         </li>
                     </ul>
@@ -59,41 +146,41 @@
 
                 <section class="column tasks">
                     <h3>
-                        <span class="material-icons-round icon-box">code</span>
-                        Ejercicios y Entregas
+                        <span class="material-icons-round icon-box">library_add</span>
+                        Más Ejercicios
                     </h3>
-                    <p class="description">Prácticas evaluables y retos de código.</p>
-
+                    <p class="description">Prácticas adicionales de objetos.</p>
                     <ul class="resource-list">
                         <li>
-                            <a href="./ejercicios/ej1_selectores.html">
-                                <span class="material-icons-round icon-small">javascript</span>
-                                Práctica 1: Selectores
+                            <a href="./Objetos/HTML/index_ej2_objetos.html">
+                                <span class="material-icons-round icon-small">code</span>
+                                Objetos: Ejercicio 2
                                 <span class="material-icons-round arrow">chevron_right</span>
                             </a>
                         </li>
                         <li>
-                            <a href="./ejercicios/ej2_eventos.html">
-                                <span class="material-icons-round icon-small">touch_app</span>
-                                Práctica 2: Event Listener
+                            <a href="./Objetos/HTML/index_ej3_objetos.html">
+                                <span class="material-icons-round icon-small">code</span>
+                                Objetos: Ejercicio 3
                                 <span class="material-icons-round arrow">chevron_right</span>
                             </a>
                         </li>
-                        <li class="featured">
-                            <a href="./ejercicios/proyecto_todo.html">
-                                ⭐ Entrega: ToDo List Interactiva
-                                <span class="material-icons-round arrow">verified</span>
+                        <li>
+                            <a href="./Objetos/HTML/index_ej4_objetos.html">
+                                <span class="material-icons-round icon-small">code</span>
+                                Objetos: Ejercicio 4
+                                <span class="material-icons-round arrow">chevron_right</span>
                             </a>
                         </li>
                     </ul>
                 </section>
             </div>
         </article>
-        
-        </main>
+
+    </main>
 
     <footer>
-        <p>Desarrollo de Aplicaciones Multiplataforma - Curso 2024/25</p>
+        <p>Desarrollo de Aplicaciones Multiplataforma - M04/M09</p>
     </footer>
 
 </body>
