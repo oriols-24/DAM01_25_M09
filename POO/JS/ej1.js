@@ -6,11 +6,14 @@ class TarjetaCredito{
     pin;
 
     constructor () {
-        this.numero = ;
+        this.numero = 5;
         this.titular = "Oriol Llorens Ramirez";
-        this.ccv = 343
-        this.fechaCaducidad = 5/34
-        this.pin =
+        this.ccv = 343;
+        this.fechaCaducidad = 5/34;
+        this.pin = 1234;
+
 
     }
+
+
 }
