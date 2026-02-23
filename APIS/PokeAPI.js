@@ -13,7 +13,7 @@ async function fetchPokemon(id) {
     }
 }
 
-async function displayPokemon(id) {
+async function MostrarPokemon(id) {
     const pokemon = await fetchPokemon(id);
     if (pokemon) {
         const pokemonDiv = document.createElement('div');
@@ -26,25 +26,25 @@ async function displayPokemon(id) {
     }
 }
 
-async function loadPokemons() {
+async function CargarPokemons() {
     for (let i = 1; i <= 4; i++) {
-        await displayPokemon(i);
+        await MostrarPokemon(i);
     }
 }
 
-async function loadMorePokemons() {
+async function CargarMasPokemons() {
     const currentCount = document.querySelectorAll('div').length;
     for (let i = currentCount + 1; i <= currentCount + 4; i++) {
-        await displayPokemon(i);
+        await MostrarPokemon(i);
     }
 }
 
-async function searchPokemon(name) {
+async function buscarPokemon(name) {
     try {
         const response = await fetch(`${API_URL}${name.toLowerCase()}`);
         if (!response.ok) throw new Error('Pokémon no encontrado');
         const pokemon = await response.json();
-        displayPokemon(pokemon.id);
+        MostrarPokemon(pokemon.id);
     } catch (error) {
         console.error('Search error:', error);
         alert('Pokémon no encontrado');
@@ -52,14 +52,14 @@ async function searchPokemon(name) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadPokemons();
+    CargarPokemons();
     const searchInput = document.createElement('input');
     searchInput.placeholder = 'Buscar Pokémon por nombre';
     const searchButton = document.createElement('button');
     searchButton.textContent = 'Buscar';
    searchButton.addEventListener('click', () => {
        const name = searchInput.value.trim();
-       if (name) searchPokemon(name);
+       if (name) buscarPokemon(name);
    });
 
    document.body.appendChild(searchInput);
