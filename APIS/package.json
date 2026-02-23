@@ -1,0 +1,12 @@
+{
+  "name": "apis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serverStudents.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node serverStudents.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

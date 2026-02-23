@@ -43,7 +43,7 @@
         //Conectamos y nos devuelve un texto
         async function conectar() {
             try {
-                const response = await fetch("http://127.0.0.1:3000");
+                const response = await fetch("http://127.0.0.1:3003");
                 if (!response.ok) {
                     throw new Error("Error HTTP: " + response.status);
                 }
@@ -60,7 +60,7 @@
         //Conetamos y nos devuelve un json
         async function cargarEstudiantes() {
             try {
-                const response = await fetch("http://localhost:3001/students");
+                const response = await fetch("http://localhost:3002/students");
 
                 if (!response.ok) {
                     throw new Error("Error HTTP: " + response.status);

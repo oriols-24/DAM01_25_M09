@@ -1,7 +1,7 @@
 const { createServer } = require('node:http');
 
 const hostname = '127.0.0.1';
-const port = 3001;
+const port = 3002;
 
 // Datos simulados --> como si fuera lo que nos devuelve la BDD
 let students = [
