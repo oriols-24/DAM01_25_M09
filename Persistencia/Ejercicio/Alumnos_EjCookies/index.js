@@ -1,10 +1,20 @@
 // Función para obtener el valor de una cookie
 function getCookie(name) {
- //TODO
+   return document.cookie
+   .split('; ')
+   .find(c => c.startsWith(name + '='))
+   ?.split('=')[1]
+   ?? null;
 }
 
+
 function changeConfig() {
-    //TODO
+    const config = getCookie("config");
+    if (config) {
+        const configObj = JSON.parse(config);
+        document.body.style.backgroundColor = configObj.backgroundColor;
+        document.body.style.color = configObj.textColor;
+    }
 }
 
 // Escuchamos el mensaje de la ventana hija
